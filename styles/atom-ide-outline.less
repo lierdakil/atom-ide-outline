@@ -33,24 +33,61 @@
     // syntax-variables for languge entites: https://github.com/atom/atom/blob/master/static/variables/syntax-variables.less#L32
     // atom-languageclient mapping: https://github.com/atom/atom-languageclient/blob/485bb9d706b422456640c9070eee456ef2cf09c0/lib/adapters/outline-view-adapter.ts#L270
 
-    .styleByType(array, @syntax-color-value);
-    .styleByType(boolean, @syntax-color-value);
-    .styleByType(class, @syntax-color-class);
-    .styleByType(constant, @syntax-color-constant);
-    .styleByType(constructor, @syntax-color-function);
-    .styleByType(enum, @syntax-color-variable);
-    .styleByType(field, @syntax-color-tag);
-    .styleByType(file, @syntax-color-import);
-    .styleByType(function, @syntax-color-function);
-    .styleByType(interface, @syntax-color-class);
-    .styleByType(method, @syntax-color-method);
-    .styleByType(module, @syntax-color-import);
-    .styleByType(namespace, @syntax-color-keyword);
-    .styleByType(number, @syntax-color-value);
-    .styleByType(package, @syntax-color-import);
-    .styleByType(property, @syntax-color-property);
-    .styleByType(string, @syntax-color-value);
-    .styleByType(variable, @syntax-color-variable);
+    &.type-array {
+      color: @syntax-color-value;
+    };
+    &.type-boolean {
+      color: @syntax-color-value;
+    };
+    &.type-class {
+      color: @syntax-color-class;
+    };
+    &.type-constant {
+      color: @syntax-color-constant;
+    };
+    &.type-constructor {
+      color: @syntax-color-function;
+    };
+    &.type-enum {
+      color: @syntax-color-variable;
+    };
+    &.type-field {
+      color: @syntax-color-tag;
+    };
+    &.type-file {
+      color: @syntax-color-import;
+    };
+    &.type-function {
+      color: @syntax-color-function;
+    };
+    &.type-interface {
+      color: @syntax-color-class;
+    };
+    &.type-method {
+      color: @syntax-color-method;
+    };
+    &.type-module {
+      color: @syntax-color-import;
+    };
+    &.type-namespace {
+      color: @syntax-color-keyword;
+    };
+    &.type-number {
+      color: @syntax-color-value;
+    };
+    &.type-package {
+      color: @syntax-color-import;
+    };
+    &.type-property {
+      color: @syntax-color-property;
+    };
+    &.type-string {
+      color: @syntax-color-value;
+    };
+    &.type-variable {
+      color: @syntax-color-variable;
+    };
+    
   }
 
   .status {
@@ -63,12 +100,6 @@
 
     h1 {
       font-size: 1.5rem;
-    }
-  }
-
-  .styleByType(@type, @color) {
-    &.type-@{type} {
-      color: @color;
     }
   }
 }
